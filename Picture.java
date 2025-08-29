@@ -17,6 +17,7 @@ public class Picture
     private Circle sun;
     private Circle sun2;
     private boolean drawn;
+    private boolean sunset;
 
     /**
      * Constructor for objects of class Picture
@@ -59,11 +60,22 @@ public class Picture
             sun.changeSize(80);
             sun.makeVisible();
             sun2.makeVisible();
-            sun.slowMoveVertical(300);
+            
             drawn = true;
         }
     }
 
+     /**
+     * Make sunset.
+     */
+    public void sunset()
+    {
+        if(!sunset) {
+    
+            sun.slowMoveVertical(300);
+            
+        }
+    }
     /**
      * Change this picture to black/white display
      */
